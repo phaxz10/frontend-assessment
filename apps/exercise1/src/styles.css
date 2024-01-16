@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-roboto;
+  }
+}
+
+@layer components {
+ 
+
+  .hero {
+    @apply grid place-items-center p-2 md:p-6 w-full bg-[url(https://via.placeholder.com/600x600)] aspect-square md:aspect-[1920/650] md:bg-[url(https://via.placeholder.com/1920x650)] bg-no-repeat bg-cover bg-center relative;
+
+    &::after {
+      @apply absolute top-0 left-0 w-full h-full bg-black/30 z-0 content-[''];
+    }
+
+    .content {
+      @apply z-10;
+      .title {
+        @apply font-bold text-center text-5xl md:text-7xl text-white;
+      }
+
+      .description {
+        @apply text-2xl text-center md:text-3xl pt-2 text-white;
+      }
+    }
+  }
+
+  .card {
+    @apply flex flex-col gap-4 justify-between border rounded-md bg-white p-4 w-full max-w-max;
+
+    .content {
+      @apply flex flex-col gap-4 max-w-[400px];
+
+      .image {
+        @apply aspect-[400/300] w-full;
+      }
+
+      .description {
+        @apply text-center text-lg max-w-full;
+      }
+    }
+
+    .button {
+      @apply text-center border-2 border-black w-max mx-auto font-bold py-2 px-4 rounded-full;
+    }
+  }
+}
