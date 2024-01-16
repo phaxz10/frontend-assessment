@@ -5,7 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [
+  content: [
     join(
       __dirname,
       '{src,pages,components}/**/*!(*.stories|*.spec).{vue,ts,tsx,html}'
