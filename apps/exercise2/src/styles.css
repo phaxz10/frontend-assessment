@@ -17,3 +17,21 @@
     @apply list-decimal list-outside pl-[revert];
   }
 }
+
+@layer components {
+  .tab {
+    @apply md:max-w-max border rounded-lg w-full md:border-none;
+
+    &__button {
+      @apply p-3 font-bold w-full text-left flex items-center justify-between;
+
+      &__icon {
+        @apply md:hidden;
+      }
+    }
+
+    &__content {
+      @apply overflow-hidden h-auto transition-[max-height] ease-in-out duration-300 md:absolute top-full left-0;
+    }
+  }
+}

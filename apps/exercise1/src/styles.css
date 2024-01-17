@@ -11,8 +11,6 @@
 }
 
 @layer components {
- 
-
   .hero {
     @apply grid place-items-center p-2 md:p-6 w-full bg-[url(https://via.placeholder.com/600x600)] aspect-square md:aspect-[1920/650] md:bg-[url(https://via.placeholder.com/1920x650)] bg-no-repeat bg-cover bg-center relative;
 
@@ -20,13 +18,13 @@
       @apply absolute top-0 left-0 w-full h-full bg-black/30 z-0 content-[''];
     }
 
-    .content {
+    &__content {
       @apply z-10;
-      .title {
+      &__title {
         @apply font-bold text-center text-5xl md:text-7xl text-white;
       }
 
-      .description {
+      &__description {
         @apply text-2xl text-center md:text-3xl pt-2 text-white;
       }
     }
@@ -35,20 +33,24 @@
   .card {
     @apply flex flex-col gap-4 justify-between border rounded-md bg-white p-4 w-full max-w-max;
 
-    .content {
+    &__content {
       @apply flex flex-col gap-4 max-w-[400px];
 
-      .image {
+      &__image {
         @apply aspect-[400/300] w-full;
       }
 
-      .description {
+      &__description {
         @apply text-center text-lg max-w-full;
       }
     }
 
-    .button {
+    &__button {
       @apply text-center border-2 border-black w-max mx-auto font-bold py-2 px-4 rounded-full;
     }
+  }
+
+  .container {
+    @apply flex flex-col items-center md:items-stretch md:flex-row justify-center gap-8 py-8 px-5 w-full;
   }
 }

@@ -8,11 +8,11 @@ defineProps<{
 
 <template>
   <div class="card">
-    <div class="content">
-      <img :src="image" alt="card_image" class="image" />
-      <p class="description">{{ content }}</p>
+    <div class="card__content">
+      <img :src="image" alt="card_image" class="card__content__image" />
+      <p class="card__content__description">{{ content }}</p>
     </div>
 
-    <button class="button" @click="onReadMore">READ MORE</button>
+    <button class="card__button" @click="onReadMore">READ MORE</button>
   </div>
 </template>
